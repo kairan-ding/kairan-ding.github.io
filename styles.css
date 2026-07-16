@@ -87,6 +87,10 @@ img { display: block; max-width: 100%; }
 .project-card h3 { margin: 0 0 16px; font-size: 25px; line-height: 1.35; }
 .project-card p { margin: 0; color: #c2d3dd; }
 .main-project p { color: var(--muted); }
+.project-link { display: inline-flex; align-items: center; gap: 9px; margin-top: 22px; color: var(--lime); text-decoration: none; font-size: 13px; font-weight: 800; }
+.project-link span { border-bottom: 1px solid rgba(199,243,107,.45); }
+.project-link b { font-size: 18px; transition: transform .2s ease; }
+.project-link:hover b, .project-link:focus-visible b { transform: translate(2px, -2px); }
 .project-card ul { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 0; padding: 0; list-style: none; }
 .project-card li { padding: 6px 10px; border: 1px solid rgba(255,255,255,.2); border-radius: 999px; color: #d9e5eb; font-size: 11px; }
 .main-project li { color: var(--blue); border-color: #c5d9e3; }
