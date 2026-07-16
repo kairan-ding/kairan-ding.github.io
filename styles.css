@@ -12,7 +12,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; color: var(--ink); background: var(--paper); font-family: Inter, "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif; line-height: 1.65; }
+body { margin: 0; overflow-x: hidden; color: var(--ink); background: var(--paper); font-family: Inter, "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif; line-height: 1.65; }
 a { color: inherit; }
 img { display: block; max-width: 100%; }
 .shell { width: min(1160px, calc(100% - 48px)); margin-inline: auto; }
@@ -72,6 +72,21 @@ img { display: block; max-width: 100%; }
 
 .projects-section { color: white; background: #0f3b59; }
 .section-heading.light > p { color: #b5c8d5; }
+.ai-coding-feature { position: relative; display: grid; grid-template-columns: auto 1fr auto; gap: 30px; align-items: center; margin-bottom: 24px; padding: 34px; overflow: hidden; scroll-margin-top: 98px; color: var(--ink); background: linear-gradient(120deg, #f4fbff 0%, #d9f3ff 58%, #c7f36b 145%); border: 1px solid rgba(255,255,255,.55); border-radius: 10px; box-shadow: 0 22px 60px rgba(4,25,39,.2); }
+.ai-coding-feature::after { content: ""; position: absolute; width: 280px; height: 280px; right: -145px; bottom: -185px; border: 1px solid rgba(21,87,125,.2); border-radius: 50%; box-shadow: 0 0 0 40px rgba(56,169,214,.06), 0 0 0 80px rgba(56,169,214,.04); pointer-events: none; }
+.ai-coding-mark { position: relative; z-index: 1; display: grid; place-items: center; width: 94px; height: 94px; flex: 0 0 auto; color: white; background: var(--ink); border-radius: 50%; box-shadow: inset 0 0 0 1px rgba(255,255,255,.18); }
+.ai-coding-mark span { font-size: 31px; font-weight: 900; letter-spacing: -.08em; line-height: 1; }
+.ai-coding-mark small { position: absolute; right: 5px; top: 5px; display: grid; place-items: center; width: 27px; height: 27px; color: var(--ink); background: var(--lime); border-radius: 50%; font-family: ui-monospace, monospace; font-size: 9px; font-weight: 900; }
+.ai-coding-content { position: relative; z-index: 1; max-width: 670px; }
+.ai-coding-eyebrow { margin: 0 0 7px !important; color: var(--blue) !important; font-family: ui-monospace, monospace; font-size: 11px; font-weight: 900; letter-spacing: .12em; }
+.ai-coding-content h3 { margin: 0 0 9px; font-size: clamp(26px, 3vw, 38px); line-height: 1.2; letter-spacing: -.035em; }
+.ai-coding-content > p:not(.ai-coding-eyebrow) { margin: 0; color: #486273; }
+.ai-coding-content ul { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; padding: 0; list-style: none; }
+.ai-coding-content li { padding: 5px 10px; color: var(--blue); background: rgba(255,255,255,.68); border: 1px solid rgba(21,87,125,.16); border-radius: 999px; font-size: 10px; font-weight: 800; }
+.ai-coding-link { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 18px; padding: 15px 18px; color: white; background: var(--ink); border-radius: 5px; text-decoration: none; font-size: 13px; font-weight: 900; white-space: nowrap; transition: transform .2s ease, box-shadow .2s ease; }
+.ai-coding-link b { color: var(--lime); font-size: 22px; transition: transform .2s ease; }
+.ai-coding-link:hover, .ai-coding-link:focus-visible { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(11,41,66,.18); }
+.ai-coding-link:hover b, .ai-coding-link:focus-visible b { transform: translate(2px, -2px); }
 .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
 .project-card { position: relative; min-height: 390px; padding: 34px; overflow: hidden; background: #174967; border: 1px solid rgba(255,255,255,.1); border-radius: 8px; transition: transform .25s ease, background .25s ease; }
 .project-card:hover { transform: translateY(-5px); background: #1b5374; }
@@ -130,6 +145,9 @@ footer { padding: 28px 0; color: #73818c; background: #061d2e; font-size: 12px; 
   .section { padding-block: 82px; }
   .section h2 { font-size: 40px; }
   .timeline-item { grid-template-columns: 1fr; gap: 10px; }
+  .ai-coding-feature { grid-template-columns: 1fr; gap: 22px; padding: 27px; }
+  .ai-coding-mark { width: 78px; height: 78px; }
+  .ai-coding-link { width: fit-content; }
   .project-grid, .skills-grid { grid-template-columns: 1fr; }
   .project-card { min-height: auto; }
   .contact-inner { grid-template-columns: 1fr; }
