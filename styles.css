@@ -51,10 +51,6 @@ img { display: block; max-width: 100%; }
 .orbit { position: absolute; border: 1px solid rgba(21,87,125,.28); border-radius: 50%; }
 .orbit-one { width: 510px; height: 510px; right: -72px; top: 30px; }
 .orbit-two { width: 360px; height: 360px; left: -90px; bottom: -35px; border-style: dashed; }
-.code-card { position: absolute; z-index: 4; left: -48px; bottom: 42px; width: 146px; padding: 17px 18px; color: white; background: var(--ink); box-shadow: 0 18px 42px rgba(3,25,42,.25); border-radius: 8px; }
-.code-card span, .code-card small { display: block; color: #a7c2d2; font-family: ui-monospace, monospace; font-size: 11px; }
-.code-card b { display: block; margin: 4px 0 9px; color: var(--lime); font-family: Georgia, serif; font-size: 25px; }
-
 .section { padding-block: 120px; }
 .about-section { color: white; background: var(--ink); }
 .split-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 120px; align-items: start; }
@@ -131,7 +127,6 @@ footer { padding: 28px 0; color: #73818c; background: #061d2e; font-size: 12px; 
   .hero-meta { flex-direction: column; gap: 10px; }
   .portrait-wrap { width: 84%; }
   .orbit-one { width: 110%; height: auto; aspect-ratio: 1; right: -10%; }
-  .code-card { left: -22px; bottom: 24px; }
   .section { padding-block: 82px; }
   .section h2 { font-size: 40px; }
   .timeline-item { grid-template-columns: 1fr; gap: 10px; }
